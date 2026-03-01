@@ -58,6 +58,8 @@ h1 em { font-style: italic; color: var(--red); }
 .sec:last-child { border-bottom: none; }
 .sec-eye { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; display: flex; align-items: center; gap: .6rem; }
 .sec-eye::after { content:''; flex:1; height:1px; background:var(--rule); }
+.sec-eye-lnk { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.sec-eye-lnk:hover { color: var(--ink); border-bottom-color: var(--ink); }
 h2 { font-family: 'EB Garamond', serif; font-size: clamp(1.45rem,4vw,1.9rem); font-weight: 400; line-height: 1.18; margin-bottom: .95rem; }
 p.t { font-size: .86rem; line-height: 1.85; color: var(--muted); margin-bottom: .75rem; }
 p.t:last-child { margin-bottom: 0; }
@@ -205,8 +207,8 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <div class="sec">
   <div class="sec-eye">The Argument</div>
   <h2>MedQA measures accuracy.<br>Nobody measures trust.</h2>
-  <p class="t">Clinical accuracy benchmarks tell you if the model is right. They do not tell you if the patient acts on it. Those are different problems. A model can give a correct answer and still fail through overconfidence, emotional blindness, or a paywall at the moment of escalation.</p>
-  <p class="t"><strong>The behaviors that precondition trust are measurable.</strong> Calibrated uncertainty. Appropriate escalation. Transparent limitation. Emotional attunement. Starke et al. (2025), an 18-expert JMIR consensus, identifies these as consistent across health AI contexts. No product team has operationalized them as an evaluation framework. I built a proof of concept to show it is possible, using two validation methods.</p>
+  <p class="t">Clinical accuracy tells you if the model is right. In consumer AI, that is not enough. What matters is whether the user understands the answer, trusts it appropriately, and takes the right next step. A model can be correct and still fail through overconfidence, unclear escalation, or poor emotional alignment.</p>
+  <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> Calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. Starke et al. 2025 identifies these across health AI contexts. No consumer team has operationalized them into an evaluation framework. I built a proof of concept showing it can be done.</p>
 </div>
 
 <!-- VALIDATION 1 -->
@@ -226,7 +228,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
       <div class="row-n">F01</div>
       <div>
         <div class="row-title">Dropoff at Paywall</div>
-        <p class="row-body">Paywalls at the moment of need destroy trust instantly</p>
+        <p class="row-body">Paywalls at the moment of need destroy trust instantly.</p>
         <span class="row-quote" data-pattern="The Locked Door Loop"></span>
       </div>
     </div>
@@ -234,7 +236,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
       <div class="row-n">F02</div>
       <div>
         <div class="row-title">Symptom Checker Dead End</div>
-        <p class="row-body">Listing possibilities without answers makes anxiety worse</p>
+        <p class="row-body">Listing possibilities without answers makes anxiety worse.</p>
         <span class="row-quote" data-pattern="Symptom Checker Dead End"></span>
       </div>
     </div>
@@ -242,7 +244,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
       <div class="row-n">F03</div>
       <div>
         <div class="row-title">Dangerous Confidence Gap</div>
-        <p class="row-body">Confident wrong answers are more common than uncertain right ones</p>
+        <p class="row-body">Confident wrong answers are more common than uncertain right ones.</p>
         <span class="row-quote" data-pattern="Dangerous Confidence Gap"></span>
       </div>
     </div>
@@ -267,14 +269,13 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <!-- VALIDATION 2 -->
 <div class="sec" id="benchmark">
-  <div class="sec-eye">Validation 2 of 2 — Trust Benchmark</div>
+  <div class="sec-eye">Validation 2 of 2 — Trust Benchmark* (<a href="#limits" class="sec-eye-lnk">see limitations</a>)</div>
   <h2>Benchmarked 4 models against the<br>Starke et al. trust framework.<br>Transparency fails universally.</h2>
 
   <div class="bench">
     <div class="bench-intro">
-      <p class="t">30 adversarial prompts. Four models under default consumer conditions, no system prompts. Each response scored 1 to 5 across five trust dimensions derived from the Starke et al. (2025) JMIR consensus framework.</p>
-      <p class="t"><strong>The finding:</strong> Transparency of Limitation scores below 4.0 for every model tested. Three of four score below 3.6. All models disclaim. None make their limitations genuinely useful to the patient.</p>
-      <p class="t">Secondary signals: Copilot is the most balanced. Gemini collapses on continuity prompts. ChatGPT shows an escalation failure on the cardiac emergency case despite high overall scores.</p>
+      <p class="t">Benchmarked four consumer models against the Starke et al. trust framework to assess alignment with the MAI goal of safe clinical augmentation.</p>
+      <p class="t"><strong>The finding:</strong> Transparency of Limitation scores below 4.0 for every model tested. Three of four score below 3.6. Few made limitations actionable. That gap matters because medical superintelligence requires calibrated human-AI collaboration, not generic risk language.</p>
       <a href="https://1drv.ms/x/c/a323242b192694d0/IQCD-BeqVvMbQLat_DRkxngMAUnL5GuAqBzUajKVOuDM7yk?e=0o2XFr" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         Full scoring data
@@ -296,32 +297,31 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <div class="sec" id="product">
   <div class="sec-eye">What I Would Build at Microsoft</div>
   <h2>If you can measure trust, you can own it. Here's how I would build it:</h2>
-  <p class="t">Microsoft is uniquely positioned here. Copilot touches consumers and enterprise. Teams Health and Azure Health Data Services create the infrastructure layer. Outlook, Edge, and Teams give a longitudinal view of the patient no competitor has. The question is whether to treat trust as a compliance checkbox or a product surface.</p>
+  <p class="t">Microsoft’s footprint across Copilot, Teams, and Azure Health Data Services should support safe clinical augmentation at scale and allow performance to be measured in real workflows, not isolated chats.</p>
 
-  <div class="rows">
+
+  <div class="rows">  
     <div class="row">
       <div class="row-n grey">01</div>
       <div>
-        <div class="row-title">Make trust measurable. Build a consumer health AI trust benchmark</div>
-        <p class="row-body">There is no external benchmark for trust-precondition behaviors in consumer health AI. MedQA measures knowledge. Nothing measures whether patients trust the answer enough to act. <strong>Microsoft should build this internally:</strong> 500+ prompts with clinical raters, inter-rater reliability measurement, and retesting tied to every model update. When you can measure trust systematically, you improve it faster than competitors who cannot. I built the early version of this at NimbleRx across 10K medical messages and 20+ eval cycles. At Microsoft's scale, this becomes a durable moat, not a research project.</p>
+        <div class="row-title">Ship a Consumer Health Trust Benchmark</div>
+        <p class="row-body">The industry focuses on correctness, not trust. <strong>Build an internal trust benchmark for consumer health AI.</strong> 500+ realistic health prompts, clinically rated on clarity, uncertainty calibration, escalation quality, and limitation transparency, with results tied to release gates. At NimbleRx, I operationalized this across 10K+ real patient messages and 20+ evaluation cycles, turning trust behaviors into measurable signals. At Microsoft's scale, this redefines user experiences across millions.</p>
       </div>
     </div>
     <div class="row">
       <div class="row-n grey">02</div>
       <div>
-        <div class="row-title">Redesign transparency as a product feature, not a disclaimer</div>
-        <p class="row-body">Every model says "I'm not a doctor." None tell users what they would need to know to make a better decision. <strong>Transparency of Limitation should be specific, contextual, and actionable per query.</strong> "To answer this precisely, a doctor would need your medication history and a CBC" is useful. "I'm not a medical professional" is not. Measured with user comprehension testing, not legal review. At NimbleRx, unclear AI replies were the top driver of patient drop-offs in 60+ user interviews. The fix was specific language, not more disclaimers.</p>
+        <div class="row-title">Make transparency actionable</div>
+        <p class="row-body">Disclaimers do not improve decisions. <strong>Transparency must help users make the right next move.</strong> Copilot should clearly state what it does not know, what information would change the answer, and when escalation is appropriate. At NimbleRx, unclear AI responses were the top drop-off driver in 60+ user interviews. More precise language reduced friction. Generic warnings did not.</p>
       </div>
     </div>
     <div class="row">
       <div class="row-n grey">03</div>
       <div>
-        <div class="row-title">Close the Trust Loop</div>
-        <p class="row-body">Trust fails when the AI says seek care and the user does not act. The problem is not just accuracy. It is friction and unclear escalation.
-          Trust fails when the AI flags risk and the user does not act. When the system flags risk, the next step should be one click away, such as messaging a clinician, initiating a Teams referral, opening a provider directory, or surfacing a care action within Microsoft’s existing services. Then measure what percentage of users complete that step. Completion after escalation is the trust metric.</p>
+        <div class="row-title">Design for follow-through</div>
+        <p class="row-body">Trust fails when Copilot flags risk and the user does not act. The issue is escalation friction. <strong>Embed escalation directly in the flow.</strong> When risk is identified, the next step should be immediate: message a clinician, initiate a Teams referral, or surface a care action. Then track one metric: when Copilot recommends escalation, what percentage of users complete the next step? Follow-through is the trust signal.</p>
       </div>
     </div>
-  </div>
 </div>
 
 <!-- LIMITATIONS (inline, readable, same style as page) -->
@@ -329,7 +329,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="lims-w">
     <div class="lims-eye">Methodology and Limitations</div>
     <h2>This is a proof of concept, not a peer-reviewed benchmark.</h2>
-    <p class="lims-intro">The goal is to show the measurement infrastructure is worth building, and that the gaps are findable when you look. <strong>These limitations are stated plainly</strong>, because a PM who understands the limits of their own data is more useful than one who overclaims.</p>
+    <p class="lims-intro">The goal is to show the measurement infrastructure is worth building to inform direction, the results should not be considered conclusive. <strong>These limitations are stated plainly</strong>, because a PM who understands the limits of their own data is more useful than one who overclaims.</p>
     <div class="lims-grid">
       <div>
         <div class="li-t">Single rater, no medical background</div>
@@ -353,7 +353,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
       </div>
       <div>
         <div class="li-t">Evaluator bias cannot be ruled out</div>
-        <p class="li-p">Built by someone applying for a Microsoft health AI role, using Claude as a primary tool. Blind evaluation protocols were not used.</p>
+        <p class="li-p">Built by someone applying for a Microsoft health AI role. Blind evaluation protocols were not used.</p>
       </div>
     </div>
     <div class="cite">Starke G, Gille F, et al. (2025). Finding Consensus on Trust in AI in Health Care: Recommendations From a Panel of International Experts. Journal of Medical Internet Research. DOI: 10.2196/56306</div>
