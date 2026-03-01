@@ -1,6 +1,6 @@
 # Consumer Health AI Trust
 
-**Jiahui Jin · February 2026**
+**Jiahui Jin · March 2026**
 
 Capability is converging. Trust is not. Health AI models are getting more accurate, but they are not getting better at the behaviors that determine whether patients feel safe enough to act on what they hear.
 
