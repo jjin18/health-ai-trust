@@ -1,0 +1,16 @@
+# Environment
+.env
+
+# Data outputs (don't commit raw scraped data)
+data/*.csv
+outputs/*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Keep folder structure
+!data/.gitkeep
+!outputs/.gitkeep

@@ -1,0 +1,5 @@
+praw
+pandas
+google-play-scraper
+datasets
+anthropic
