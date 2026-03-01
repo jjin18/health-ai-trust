@@ -1,0 +1,117 @@
+[
+  {
+    "pattern_name": "The Locked Door Loop",
+    "description": "Users are trapped in an endless cycle where they cannot sign in because the app only shows a registration page, and cannot register because they already have an account, effectively locking them out of the tool entirely.",
+    "quotes": [
+      {
+        "text": "Won't let me sign up or sign in. Says I'm already in the system but then tries to force me to sign up, which gives me the error that I'm already signed up. Can't use system checker. Completely worthless.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      },
+      {
+        "text": "Wonr let me enter symptoms without registering, so attempted to register, app froze, closed and reopened, tried again to register, says my email is already registered, at about that time I receive an email entitled \"Welcome to Web MD\", but it only seems to be for a newsletter, opened app again to try and just login, but it gives me NO option to login, I can only register. Clicking the \"Register/Sign in\" button just brings me to the Registration screen. Completely useless scam to steal emails.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      },
+      {
+        "text": "Where is the sign in page? only a register page and it tells me that I have an account, but there is no way to sign in.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      }
+    ],
+    "why_it_matters": "When someone is worried about a health symptom and turns to a health AI tool, being locked out by a broken authentication flow doesn't just cause frustration\u2014it destroys the fundamental promise that the tool is there when you need it. Users interpret this as the company prioritizing data collection over their wellbeing, and they never come back.",
+    "product_intervention": "Allow full anonymous access to core health features like symptom checking without requiring account creation. Implement a guest mode that delivers value immediately, and only prompt registration for personalized features like medication reminders or saved history. Fix the sign-in/register flow so existing accounts are detected and routed correctly."
+  },
+  {
+    "pattern_name": "Symptom Checker Dead End",
+    "description": "Users who manage to access the symptom checker encounter broken UI elements, blank result screens, or medical terminology too complex to navigate, leaving them with no actionable output after investing time entering their health data.",
+    "quotes": [
+      {
+        "text": "Symptom options are way too limiting, and the questions it asks based on the symptoms are far too generalized. Even trying to enter symptoms for a condition I have been diagnosed with doesn't lead me to the right answer, sometimes it's not even remotely close to correct.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.symptomate.mobile",
+        "source_label": "Symptomate (reviews)"
+      },
+      {
+        "text": "For the first time EVER, I found symptom terminology as if I was in the medical field. I couldn't even narrow my symptom down to ONE not knowing what anything meant.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      },
+      {
+        "text": "Cannot enter symptom checker on Samsung Galaxy S23 anymore. You'll notice the \"next\" button is directly beneath the Samsung back button on screen. Not sure if it's a widespread mobile device issue or specific to Samsung but there's no way to adjust it and no way to move forward to check symptoms.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      }
+    ],
+    "why_it_matters": "The symptom checker is the core value proposition of a health AI tool. When users enter sensitive personal health data and receive nothing in return\u2014a blank screen, an inaccessible button, or incomprehensible jargon\u2014it teaches them that the tool is unreliable at the exact moment they are most vulnerable and information-seeking.",
+    "product_intervention": "Implement end-to-end functional testing across major device models before every release. Use plain-language symptom descriptions with hover/tap explanations for medical terms. Add graceful error handling that never returns a blank screen\u2014always provide at least a fallback general guidance message and a prompt to contact a real provider."
+  },
+  {
+    "pattern_name": "Dangerous Confidence Gap",
+    "description": "The tool provides incorrect or contradictory medical information\u2014such as conflicting drug interaction results across platforms or missed serious diagnoses\u2014eroding user trust in its clinical reliability.",
+    "quotes": [
+      {
+        "text": "I supplied all my signs and symptoms and still you got it wrong. My diagnosis after EEG and MRI said permanent frontal lobe injury with Aphasia due to prolonged epilepsy lack of oxygen and history of Petit mal seizures early onset damage and also Alzheimers Yes, I also now have mental health issues..also permanent cystic colitis and arrhythmia. I expected more from your site and clearly other platforms shine and tower above you...so disappointing",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      },
+      {
+        "text": "Checked 2 drugs with WebMD online got serious interaction. Checked with app & got No interaction??",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      },
+      {
+        "text": "Lots of important details that can not be added, such as being postpartum. Is it inflammation in the rib cage or postpartum eclampsia? You wouldn't be able to narrow it down using this app.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      }
+    ],
+    "why_it_matters": "Inconsistent or incomplete medical information is not merely a UX problem\u2014it is a safety issue. A user who checks a drug interaction on the app and sees no warning, when the web version flags a serious one, could make a dangerous medication decision. Users who discover these discrepancies lose all confidence in every piece of information the tool provides.",
+    "product_intervention": "Ensure data parity across all platforms (app, web, API) with automated consistency checks. Clearly communicate confidence levels and limitations of results (e.g., 'This tool cannot account for all conditions\u2014always confirm with your doctor'). Add contextual input fields for critical modifiers like pregnancy, postpartum status, and comorbidities that materially change differential diagnoses."
+  },
+  {
+    "pattern_name": "Cold at the Worst Moment",
+    "description": "The app removes or degrades features users deeply depend on for ongoing health management\u2014such as allergy trackers, medication reminders, or condition lists\u2014without warning or replacement, leaving them feeling abandoned.",
+    "quotes": [
+      {
+        "text": "It was so shocking it put my anxiety through the roof. I thought I was going to die because my whole body was shaking and tingling. What am I dealing with? Right now I have no pain or tender near that area still relief but curious on what happened and why I got this shock and that popping feeling so loud it scared me half to death.",
+        "source_url": "https://huggingface.co/datasets/ruslanmv/ai-medical-chatbot",
+        "source_label": "AI Medical Chatbot dataset (case #1)"
+      },
+      {
+        "text": "This used to be a good app. They removed allergy information, and the med reminders stopped working properly a while back. Those features were the reasons I installed the app to begin with.",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      },
+      {
+        "text": "Once you enter conditions or meds, you can't add or edit ... Also .epically conditions are incomplete or missing Waste of time",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      }
+    ],
+    "why_it_matters": "Health tools earn trust through daily, habitual use\u2014a user checking their allergy count every morning or relying on medication reminders builds a relationship of dependency. Abruptly removing these features signals that the company's priorities are disconnected from user health needs, and it can have real health consequences for people who built routines around the tool.",
+    "product_intervention": "Never sunset a health feature without providing at least 90 days notice, a data export option, and a recommended alternative. Before removing any feature, measure active daily users and provide a migration path. Treat long-running health tracking features as infrastructure commitments, not disposable product experiments."
+  },
+  {
+    "pattern_name": "Monetization Erodes Credibility",
+    "description": "Aggressive advertising, data collection demands, and email spam make users question whether the app serves their health interests or exists primarily to monetize their attention and personal information.",
+    "quotes": [
+      {
+        "text": "Was charged $90 (NINETY) to be told \"If you're vomiting we won't help you. But thanks for the money!!!\" This isn't a case of not getting the help we wanted. They literally took our $90 and told us \"Sorry, we won't help you.\"",
+        "source_url": "https://play.google.com/store/apps/details?id=com.teladoc.members",
+        "source_label": "Teladoc (reviews)"
+      },
+      {
+        "text": "Too many emails a day, even after 'Unsubscribe', even after turning off all notifications in the app, still they flood your inbox. Unfortunately, unable to give zero stars. Do NOT download this app, even after many Unsubscribe requests, they fill your inbox with even more emails. Have reported to Google",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      },
+      {
+        "text": "Web MD wants your family photos and videos you have on your phone, Why? They snoop your history on Internet!",
+        "source_url": "https://play.google.com/store/apps/details?id=com.webmd.android",
+        "source_label": "WebMD (reviews)"
+      }
+    ],
+    "why_it_matters": "Health information requires a higher trust threshold than other content domains. When users perceive that ads obstruct access to symptom results, that unsubscribe requests are ignored, or that the app requests unnecessary device permissions, they conclude the product treats their health anxiety as a monetization opportunity\u2014and they extend that distrust to the medical content itself.",
+    "product_intervention": "Never place ads between a user and their health results\u2014restrict ads to non-critical surfaces. Honor unsubscribe requests immediately and verifiably. Minimize permission requests to only what is functionally necessary, and provide plain-language explanations for each permission. Consider an ad-free tier or earn trust by making core health features completely ad-free."
+  }
+]

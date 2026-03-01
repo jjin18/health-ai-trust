@@ -91,7 +91,9 @@ def flag_trust_relevant(text):
 
 if not df_chatbot.empty:
     df_chatbot["trust_relevant"] = df_chatbot["patient"].apply(flag_trust_relevant)
-    trust_cases = df_chatbot[df_chatbot["trust_relevant"]]
+    trust_cases = df_chatbot[df_chatbot["trust_relevant"]].copy()
+    trust_cases["case_index"] = range(len(trust_cases))
+    trust_cases["dataset_url"] = "https://huggingface.co/datasets/ruslanmv/ai-medical-chatbot"
     trust_cases.to_csv("../data/trust_relevant_cases.csv", index=False)
     print(f"  Found {len(trust_cases)} trust-relevant cases from chatbot dataset")
 

@@ -46,12 +46,12 @@ h1 em { font-style: italic; color: var(--red); }
 .tag { font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .08em; padding: .25rem .55rem; border: 1px solid var(--rule); color: var(--muted); }
 
 /* STATS STRIP */
-.stats { display: grid; grid-template-columns: repeat(4,1fr); border-bottom: 1px solid var(--rule); }
-.s { padding: 1.6rem 1.2rem 1.6rem 0; border-right: 1px solid var(--rule); }
+.stats { display: grid; grid-template-columns: repeat(4,1fr); border-bottom: 1px solid var(--rule); align-items: start; }
+.s { padding: 1.6rem 1.25rem 1.6rem 0; padding-left: 2rem; border-right: 1px solid var(--rule); }
 .s:last-child { border-right: none; }
-.s-n { font-family: 'EB Garamond', serif; font-size: 2.5rem; line-height: 1; display: block; }
+.s-n { font-family: 'EB Garamond', serif; font-size: 2.5rem; line-height: 1.1; display: block; margin-bottom: .55rem; }
 .s-n.r { color: var(--red); }
-.s-l { font-family: 'JetBrains Mono', monospace; font-size: .44rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .4rem; display: block; line-height: 1.6; }
+.s-l { font-family: 'JetBrains Mono', monospace; font-size: .44rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 0; display: block; line-height: 1.6; }
 
 /* SECTION */
 .sec { padding: 3rem 0; border-bottom: 1px solid var(--rule); }
@@ -77,11 +77,14 @@ p.t strong { color: var(--ink); font-weight: 600; }
 .row-body { font-size: .78rem; line-height: 1.78; color: var(--muted); }
 .row-body strong { color: var(--ink); font-weight: 600; }
 .row-quote { display: block; margin-top: .6rem; font-size: .72rem; font-style: italic; color: var(--muted); line-height: 1.6; padding-left: .75rem; border-left: 2px solid var(--rule); }
+.row-quote a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.row-quote a:hover { border-bottom-color: var(--red); }
 
 /* BENCH LAYOUT */
 .bench { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 1.5rem; }
 .bench-intro { }
-.bench-radar { }
+.bench-radar { overflow: visible; }
+.bench-radar svg { overflow: visible; }
 .bench-table-wrap { }
 .tbl-eye { font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
 table { width: 100%; border-collapse: collapse; }
@@ -109,24 +112,18 @@ tbody tr.flag { background: #fcedeb; }
 .btn:hover { background: var(--red); }
 .btn svg { width: 9px; height: 9px; }
 
-/* LIMITATIONS (dark) */
-.lims { background: var(--deep); padding: 3rem 0; margin-top: 0; }
+/* LIMITATIONS (inline, matches page) */
+.lims { padding: 3rem 0; border-top: 1px solid var(--rule); background: var(--paper); }
 .lims-w { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
-.lims-eye { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(248,244,238,.25); margin-bottom: 1.1rem; }
-.lims h2 { font-family: 'EB Garamond', serif; font-size: 1.5rem; font-weight: 400; color: #f8f4ee; margin-bottom: .7rem; }
-.lims-intro { font-size: .82rem; line-height: 1.82; color: rgba(248,244,238,.45); margin-bottom: 2rem; }
-.lims-intro strong { color: #f8f4ee; }
-.lims-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem 3rem; }
-.li-t { font-size: .74rem; font-weight: 600; color: rgba(248,244,238,.85); margin-bottom: .2rem; }
-.li-p { font-size: .7rem; line-height: 1.72; color: rgba(248,244,238,.38); }
-.cite { margin-top: 2rem; padding: .85rem 1rem; border-left: 2px solid rgba(248,244,238,.1); font-family: 'JetBrains Mono', monospace; font-size: .46rem; color: rgba(248,244,238,.22); line-height: 1.8; }
-
-/* LIMITATIONS DROPDOWN TRIGGER */
-.lims-trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 1rem 0; margin-top: 1rem; border-top: 1px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: none; border-left: none; border-right: none; border-bottom: none; cursor: pointer; text-align: left; transition: color .15s; }
-.lims-trigger:hover { color: var(--ink); }
-.lims-chevron { font-size: .6rem; transition: transform .2s; }
-.lims-trigger[aria-expanded="true"] .lims-chevron { transform: rotate(180deg); }
-.lims.is-collapsed { display: none; }
+.lims-eye { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+.lims h2 { font-family: 'EB Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--ink); margin-bottom: .7rem; }
+.lims-intro { font-size: .86rem; line-height: 1.82; color: var(--muted); margin-bottom: 2rem; }
+.lims-intro strong { color: var(--ink); }
+.lims-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; }
+.lims-grid > div { padding: 0; }
+.li-t { font-size: .8rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; }
+.li-p { font-size: .82rem; line-height: 1.78; color: var(--muted); margin: 0; }
+.lims .cite { margin-top: 2rem; padding: .85rem 1rem; border-left: 2px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: .46rem; color: var(--muted); line-height: 1.8; }
 
 /* ABOUT + FOOTER */
 .about { padding: 2.5rem 0 1.25rem; border-top: 1px solid var(--rule); }
@@ -163,7 +160,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <nav>
   <div class="nav-w">
-    <span class="nav-id">Jiahui Jin · Health AI</span>
+    <span class="nav-id">Jiahui Jin · Microsoft Health AI</span>
     <div class="nav-a">
       <a href="#validation">Validation</a>
       <a href="#benchmark">Benchmark</a>
@@ -215,8 +212,8 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <!-- VALIDATION 1 -->
 <div class="sec" id="validation">
   <div class="sec-eye">Validation 1 of 2 — User Data</div>
-  <h2>Scraped 836 reviews across 4 platforms.<br>Five trust failure modes emerged.</h2>
-  <p class="t">I scraped app store reviews from the largest consumer health AI platforms, then ran a trust-pattern synthesis across 669 flagged patient conversation cases from the HuggingFace AI Medical Chatbot dataset. The same five failures kept surfacing.</p>
+  <h2>Scraped 836 reviews.<br>Five trust failure modes emerged.</h2>
+  <p class="t">I built a scraper targeting 1–3 star reviews from major consumer health AI platforms, then ran pattern synthesis across 669 flagged patient conversation cases from the HuggingFace AI Medical Chatbot dataset. Five behavioral patterns kept showing up across every source</p>
   <div class="srcs">
     <div class="src"><b>225</b> · WebMD</div>
     <div class="src"><b>225</b> · Teladoc</div>
@@ -228,41 +225,41 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
     <div class="row">
       <div class="row-n">F01</div>
       <div>
-        <div class="row-title">The Locked Door Loop</div>
-        <p class="row-body">Paywalls at the moment of peak clinical need. The model escalates. The product does not follow through.</p>
-        <span class="row-quote">Locked me out right when I needed help the most.</span>
+        <div class="row-title">Dropoff at Paywall</div>
+        <p class="row-body">Paywalls at the moment of need destroy trust instantly</p>
+        <span class="row-quote" data-pattern="The Locked Door Loop"></span>
       </div>
     </div>
     <div class="row">
       <div class="row-n">F02</div>
       <div>
         <div class="row-title">Symptom Checker Dead End</div>
-        <p class="row-body">Lists twelve possibilities, says see a doctor. Increases anxiety. Adds no direction.</p>
-        <span class="row-quote">More useless than Googling. At least Google gives me something to go on.</span>
+        <p class="row-body">Listing possibilities without answers makes anxiety worse</p>
+        <span class="row-quote" data-pattern="Symptom Checker Dead End"></span>
       </div>
     </div>
     <div class="row">
       <div class="row-n">F03</div>
       <div>
         <div class="row-title">Dangerous Confidence Gap</div>
-        <p class="row-body">Definitive answers to ambiguous, high-risk symptoms. Overconfidence delays care. False reassurance is the worst failure mode in health AI.</p>
-        <span class="row-quote">It told me it was definitely anxiety. I had a pulmonary embolism.</span>
+        <p class="row-body">Confident wrong answers are more common than uncertain right ones</p>
+        <span class="row-quote" data-pattern="Dangerous Confidence Gap"></span>
       </div>
     </div>
     <div class="row">
       <div class="row-n">F04</div>
       <div>
         <div class="row-title">Cold at the Worst Moment</div>
-        <p class="row-body">Clinical tone when the user needs emotional attunement. The model sees the symptom, not the person.</p>
-        <span class="row-quote">It gave me a Wikipedia article when I needed someone to talk to.</span>
+        <p class="row-body">Information without acknowledgment feels inhuman.</p>
+        <span class="row-quote" data-pattern="Cold at the Worst Moment"></span>
       </div>
     </div>
     <div class="row">
       <div class="row-n">F05</div>
       <div>
         <div class="row-title">Monetization Erodes Credibility</div>
-        <p class="row-body">Features users built health routines around get gated without warning. Longitudinal trust collapses fast and does not return.</p>
-        <span class="row-quote">Can't build a health habit on a tool that keeps changing on me.</span>
+        <p class="row-body">Longitudinal trust collapses fast and does not return.</p>
+        <span class="row-quote" data-pattern="Monetization Erodes Credibility"></span>
       </div>
     </div>
   </div>
@@ -276,7 +273,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="bench">
     <div class="bench-intro">
       <p class="t">30 adversarial prompts. Four models under default consumer conditions, no system prompts. Each response scored 1 to 5 across five trust dimensions derived from the Starke et al. (2025) JMIR consensus framework.</p>
-      <p class="t"><strong>The finding:</strong> Transparency of Limitation scores below 4.0 for every model tested. Three of four score below 3.6. All models disclaim. None make their limitations genuinely useful to the patient. This is a design failure, not a compliance one.</p>
+      <p class="t"><strong>The finding:</strong> Transparency of Limitation scores below 4.0 for every model tested. Three of four score below 3.6. All models disclaim. None make their limitations genuinely useful to the patient.</p>
       <p class="t">Secondary signals: Copilot is the most balanced. Gemini collapses on continuity prompts. ChatGPT shows an escalation failure on the cardiac emergency case despite high overall scores.</p>
       <a href="https://1drv.ms/x/c/a323242b192694d0/IQCD-BeqVvMbQLat_DRkxngMAUnL5GuAqBzUajKVOuDM7yk?e=0o2XFr" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
@@ -285,7 +282,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
     </div>
     <div class="bench-radar">
       <div class="tbl-eye">Trust dimension profile</div>
-      <svg id="radar" viewBox="0 0 260 260" style="width:100%;max-width:260px;display:block;margin:0 auto .5rem;"></svg>
+      <svg id="radar" viewBox="0 0 260 260" style="width:100%;max-width:260px;display:block;margin:0 auto .5rem;overflow:visible;"></svg>
       <div id="rlegend" style="display:grid;grid-template-columns:1fr 1fr;gap:.3rem .6rem;margin-bottom:1.4rem;"></div>
     </div>
     <div class="bench-table-wrap">
@@ -298,14 +295,14 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <!-- PRODUCT -->
 <div class="sec" id="product">
   <div class="sec-eye">What I Would Build at Microsoft</div>
-  <h2>Three moves. One thesis: if you can measure trust, you can own it.</h2>
+  <h2>If you can measure trust, you can own it. Here's how I would build it:</h2>
   <p class="t">Microsoft is uniquely positioned here. Copilot touches consumers and enterprise. Teams Health and Azure Health Data Services create the infrastructure layer. Outlook, Edge, and Teams give a longitudinal view of the patient no competitor has. The question is whether to treat trust as a compliance checkbox or a product surface.</p>
 
   <div class="rows">
     <div class="row">
       <div class="row-n grey">01</div>
       <div>
-        <div class="row-title">Build the first consumer health AI trust benchmark</div>
+        <div class="row-title">Make trust measurable. Build a consumer health AI trust benchmark</div>
         <p class="row-body">There is no external benchmark for trust-precondition behaviors in consumer health AI. MedQA measures knowledge. Nothing measures whether patients trust the answer enough to act. <strong>Microsoft should build this internally:</strong> 500+ prompts with clinical raters, inter-rater reliability measurement, and retesting tied to every model update. When you can measure trust systematically, you improve it faster than competitors who cannot. I built the early version of this at NimbleRx across 10K medical messages and 20+ eval cycles. At Microsoft's scale, this becomes a durable moat, not a research project.</p>
       </div>
     </div>
@@ -319,21 +316,16 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
     <div class="row">
       <div class="row-n grey">03</div>
       <div>
-        <div class="row-title">Ship a longitudinal trust metric and enforce never-gate zones</div>
-        <p class="row-body">The Locked Door Loop is the one trust failure only Microsoft can prevent at scale. <strong>Clinical escalation paths in Copilot should never be paywalled.</strong> Enshrine this in product principles, not guidelines. Then track whether users who hit a safety escalation actually complete the recommended action. That completion rate is the trust metric worth optimizing, not session time or engagement. Longer term: Microsoft's presence across Outlook, Teams, Edge, and Copilot creates a unique opportunity to measure trust longitudinally across the full patient interaction surface. No health AI competitor has that data layer. Building infrastructure to use it is a 5-year head start.</p>
+        <div class="row-title">Close the Trust Loop</div>
+        <p class="row-body">Trust fails when the AI says seek care and the user does not act. The problem is not just accuracy. It is friction and unclear escalation.
+          Trust fails when the AI flags risk and the user does not act. When the system flags risk, the next step should be one click away, such as messaging a clinician, initiating a Teams referral, opening a provider directory, or surfacing a care action within Microsoft’s existing services. Then measure what percentage of users complete that step. Completion after escalation is the trust metric.</p>
       </div>
     </div>
   </div>
 </div>
 
-  <button type="button" class="lims-trigger" id="lims-trigger" aria-expanded="false" aria-controls="limits">
-    Want to know about the limitations of what I did?
-    <span class="lims-chevron">▼</span>
-  </button>
-</div><!-- /w -->
-
-<!-- LIMITATIONS -->
-<div class="lims is-collapsed" id="limits">
+<!-- LIMITATIONS (inline, readable, same style as page) -->
+<div class="lims" id="limits">
   <div class="lims-w">
     <div class="lims-eye">Methodology and Limitations</div>
     <h2>This is a proof of concept, not a peer-reviewed benchmark.</h2>
@@ -368,12 +360,14 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   </div>
 </div>
 
+</div><!-- /w -->
+
 <div class="w">
 <div class="about">
   <div class="about-g">
     <div>
-      <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers. UBC BUCS 2026.</p>
-      <p class="about-note">Resume and full scoring spreadsheet on OneDrive. View-only, no download required.</p>
+      <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers.</p>
+      <p class="about-note">Resume and full scoring spreadsheet on OneDrive (yes, I intentionally didn't use Google Drive). View-only, no download required.</p>
     </div>
     <div class="lnks">
       <a href="https://1drv.ms/b/c/a323242b192694d0/IQBrdneVuwewTK6lse6XAbz0AdAncyDM4UsYVyyPraXho10?e=z8b3Xw" target="_blank" rel="noopener" class="lnk">
@@ -429,7 +423,7 @@ const sc=v=>v>=4?'hi':v>=3.5?'mi':'lo';
     svg+=`<polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#d6cfc4" stroke-width="${v===5?1:.5}"/>`;
   });
 
-  // axes + labels
+  // axes + labels (overflow:visible on SVG so full text shows)
   Array.from({length:n},(_,i)=>{
     const [x,y]=pt(5,i),a=ang(i);
     const lx=cx+(r+20)*Math.cos(a),ly=cy+(r+20)*Math.sin(a);
@@ -464,18 +458,43 @@ document.getElementById('tbl').innerHTML=
   `<thead><tr><th>Dimension</th>${M.map(m=>`<th style="color:${C[m]}">${m}</th>`).join('')}</tr></thead>`+
   `<tbody>${D.map(d=>`<tr class="${d.k==='d3'?'flag':''}"><td><div class="dn">${d.n}</div><div class="ds">${d.s}</div></td>${M.map(m=>`<td class="${sc(S[m][d.k])}">${S[m][d.k].toFixed(2)}</td>`).join('')}</tr>`).join('')}</tbody>`;
 
-// Limitations dropdown
+// ── Load direct quotes with source links from trust_patterns.json ──
 (function(){
-  var trigger=document.getElementById('lims-trigger'), panel=document.getElementById('limits');
-  if(!trigger||!panel) return;
-  function toggle(){
-    panel.classList.toggle('is-collapsed');
-    var open=!panel.classList.contains('is-collapsed');
-    trigger.setAttribute('aria-expanded',open);
-  }
-  trigger.addEventListener('click',toggle);
-  if(window.location.hash==='#limits'){ panel.classList.remove('is-collapsed'); trigger.setAttribute('aria-expanded','true'); }
+  fetch('trust_patterns.json').then(function(r){ return r.ok ? r.json() : null; }).then(function(patterns){
+    if(!patterns||!Array.isArray(patterns)) return;
+    var byName = {};
+    patterns.forEach(function(p){ byName[p.pattern_name] = p; });
+    document.querySelectorAll('.row-quote[data-pattern]').forEach(function(el){
+      var name = el.getAttribute('data-pattern');
+      var p = byName[name];
+      if(!p||!p.quotes||!p.quotes.length) return;
+      var q = p.quotes[0];
+      var text = typeof q === 'string' ? q : (q.text || '');
+      if(!text) return;
+      var url = typeof q === 'object' && q && q.source_url;
+      var label = typeof q === 'object' && q && q.source_label;
+      if(url){
+        var a = document.createElement('a');
+        a.href = q.source_url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = text;
+        el.appendChild(a);
+        if(label && label !== 'Demo'){
+          var span = document.createElement('span');
+          span.style.marginLeft = '.35rem';
+          span.style.fontSize = '.65rem';
+          span.style.color = 'var(--muted)';
+          span.textContent = ' — ' + label;
+          el.appendChild(span);
+        }
+      } else {
+        el.textContent = text;
+      }
+    });
+  }).catch(function(){});
 })();
+
 </script>
 </body>
 </html>

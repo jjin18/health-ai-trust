@@ -70,11 +70,13 @@ for app_id, app_name in APPS:
 
         for review in result_1 + result_2 + result_3:
             all_reviews.append({
-                "app":     app_name,
-                "score":   review["score"],
-                "text":    review["content"],
-                "date":    review["at"],
-                "thumbs":  review.get("thumbsUpCount", 0),
+                "app":            app_name,
+                "app_id":         app_id,
+                "app_store_url":  f"https://play.google.com/store/apps/details?id={app_id}",
+                "score":          review["score"],
+                "text":           review["content"],
+                "date":           review["at"],
+                "thumbs":         review.get("thumbsUpCount", 0),
             })
 
         print(f"  Got {len(result_1) + len(result_2) + len(result_3)} reviews")
