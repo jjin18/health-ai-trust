@@ -22,7 +22,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body { font-family: 'Satoshi', sans-serif; background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.6; }
 
 /* UTILS */
-.w { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+.w { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; color: rgba(17, 17, 17, 1); }
 .mono { font-family: 'JetBrains Mono', monospace; }
 .serif { font-family: 'EB Garamond', serif; }
 
@@ -120,6 +120,13 @@ tbody tr.flag { background: #fcedeb; }
 .li-t { font-size: .74rem; font-weight: 600; color: rgba(248,244,238,.85); margin-bottom: .2rem; }
 .li-p { font-size: .7rem; line-height: 1.72; color: rgba(248,244,238,.38); }
 .cite { margin-top: 2rem; padding: .85rem 1rem; border-left: 2px solid rgba(248,244,238,.1); font-family: 'JetBrains Mono', monospace; font-size: .46rem; color: rgba(248,244,238,.22); line-height: 1.8; }
+
+/* LIMITATIONS DROPDOWN TRIGGER */
+.lims-trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 1rem 0; margin-top: 1rem; border-top: 1px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: none; border-left: none; border-right: none; border-bottom: none; cursor: pointer; text-align: left; transition: color .15s; }
+.lims-trigger:hover { color: var(--ink); }
+.lims-chevron { font-size: .6rem; transition: transform .2s; }
+.lims-trigger[aria-expanded="true"] .lims-chevron { transform: rotate(180deg); }
+.lims.is-collapsed { display: none; }
 
 /* ABOUT + FOOTER */
 .about { padding: 2.5rem 0 1.25rem; border-top: 1px solid var(--rule); }
@@ -319,10 +326,14 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   </div>
 </div>
 
+  <button type="button" class="lims-trigger" id="lims-trigger" aria-expanded="false" aria-controls="limits">
+    Want to know about the limitations of what I did?
+    <span class="lims-chevron">▼</span>
+  </button>
 </div><!-- /w -->
 
 <!-- LIMITATIONS -->
-<div class="lims" id="limits">
+<div class="lims is-collapsed" id="limits">
   <div class="lims-w">
     <div class="lims-eye">Methodology and Limitations</div>
     <h2>This is a proof of concept, not a peer-reviewed benchmark.</h2>
@@ -452,6 +463,19 @@ const sc=v=>v>=4?'hi':v>=3.5?'mi':'lo';
 document.getElementById('tbl').innerHTML=
   `<thead><tr><th>Dimension</th>${M.map(m=>`<th style="color:${C[m]}">${m}</th>`).join('')}</tr></thead>`+
   `<tbody>${D.map(d=>`<tr class="${d.k==='d3'?'flag':''}"><td><div class="dn">${d.n}</div><div class="ds">${d.s}</div></td>${M.map(m=>`<td class="${sc(S[m][d.k])}">${S[m][d.k].toFixed(2)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+
+// Limitations dropdown
+(function(){
+  var trigger=document.getElementById('lims-trigger'), panel=document.getElementById('limits');
+  if(!trigger||!panel) return;
+  function toggle(){
+    panel.classList.toggle('is-collapsed');
+    var open=!panel.classList.contains('is-collapsed');
+    trigger.setAttribute('aria-expanded',open);
+  }
+  trigger.addEventListener('click',toggle);
+  if(window.location.hash==='#limits'){ panel.classList.remove('is-collapsed'); trigger.setAttribute('aria-expanded','true'); }
+})();
 </script>
 </body>
 </html>
