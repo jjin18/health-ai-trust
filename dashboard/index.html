@@ -38,9 +38,11 @@ nav { position: sticky; top: 0; z-index: 50; background: var(--deep); border-bot
 /* HERO */
 .hero { padding: 4.5rem 0 3.5rem; border-bottom: 2px solid var(--ink); }
 .hero-eye { font-family: 'JetBrains Mono', monospace; font-size: .52rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+.hero-frame { font-size: .8rem; line-height: 1.7; color: var(--muted); max-width: 640px; margin-top: .5rem; margin-bottom: 1.25rem; letter-spacing: .01em; }
 h1 { font-family: 'EB Garamond', serif; font-size: clamp(2.6rem, 7vw, 4.4rem); font-weight: 400; line-height: 1.06; letter-spacing: -.025em; }
 h1 em { font-style: italic; color: var(--red); }
-.hero-sub { margin-top: 1.6rem; font-size: .82rem; line-height: 1.85; color: var(--muted); max-width: 540px; }
+.hero-sub { margin-top: 1.5rem; font-size: .82rem; line-height: 1.9; color: var(--muted); max-width: 540px; letter-spacing: .01em; }
+.hero-sub-next { margin-top: .6rem; }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
 .hero-foot { margin-top: 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .hero-by { font-family: 'JetBrains Mono', monospace; font-size: .5rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
@@ -182,9 +184,8 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <div class="hero">
   <div class="hero-eye">Microsoft Health AI · March 2026</div>
   <h1>One bet.<br><em>Trust</em> is the next<br>frontier in health AI.</h1>
-  <p class="hero-sub">
-    Health AI is getting more accurate. <strong>Patients are trusting it less.</strong> (Starke et al., 2025). I validated that gap two ways: scraped 836 patient reviews across consumer health apps and benchmarked four models on trust. Here is what I found and what I would build at Microsoft.
-  </p>
+  <p class="hero-sub">This project turns <em>trust</em> in consumer&nbsp;health AI from a vague UX concern into a measurable model behavior by evaluating how systems respond to real patient questions.</p>
+  <p class="hero-sub hero-sub-next">I validated this two ways: benchmarked four models on trust and scraped 836 patient reviews across consumer health apps. Here is what I found and what I would build at Microsoft.</p>
 </div>
 
 <!-- STATS -->
@@ -373,7 +374,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
     <div>
       <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers.</p>
       <p class="about-mission">I believe trust in consumer health AI is the precondition for democratizing it. Without it, the tools either get abandoned or misused. I care deeply about building that trust so good health guidance can reach everyone, not just people who already know how to navigate the system. At MAI I want to ship products that earn it: transparent about limits, serious about escalation, and measured so we can own the outcome.</p>
-      <p class="about-note">Resume and full scoring spreadsheet on OneDrive (yes, I intentionally didn't use Google Drive). View-only, no download required.</p>
+      <p class="about-note">Resume and full scoring spreadsheet on OneDrive (yes, I intentionally used Microsoft Suite). View-only, no download required.</p>
     </div>
     <div class="lnks">
       <a href="https://1drv.ms/b/c/a323242b192694d0/IQBrdneVuwewTK6lse6XAbz0AdAncyDM4UsYVyyPraXho10?e=z8b3Xw" target="_blank" rel="noopener" class="lnk">
