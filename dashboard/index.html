@@ -272,13 +272,13 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <!-- VALIDATION 2 -->
 <div class="sec" id="benchmark">
-  <div class="sec-eye">Validation 2 of 2 — Trust Benchmark (<a href="#limits" class="sec-eye-lnk">see limitations</a>)</div>
-  <h2>Benchmarked 4 models on real questions <br>against the Starke et al. trust framework<br>Transparency fails universally.</h2>
+  <div class="sec-eye">Validation 2 of 2 — Trust Benchmark *<a href="#limits" class="sec-eye-lnk">see limitations</a></div>
+  <h2>Benchmarked 4 models against <br>the Starke et al. trust framework<br>Transparency fails universally.</h2>
 
   <div class="bench">
     <div class="bench-intro">
       <p class="t">The 30 prompts come from the scraped app reviews and the HuggingFace AI Medical Chatbot dataset, so the benchmark measures how models answer the questions patients actually ask.</p>
-      <p class="t"><strong>The finding:</strong> Transparency of Limitation scores below 4.0 for every model; three of four below 3.6. Models say "I'm not a doctor" but don't follow with what's reliable, when to escalate, or what to do next. The disclaimer exists; the guidance does not—shifting that boundary is what will shape future trust.</p>
+      <p class="t"><strong>The finding:</strong> Transparency of Limitation is the worst-performing dimension. Every model &lt; 4.0, three of four &lt; 3.6. We ship the disclaimer ("I'm not a doctor") but not the behavior that makes it useful: per-answer clarity on what's reliable, when to escalate, and what to do next.</p>
       
       <a href="https://1drv.ms/x/c/a323242b192694d0/IQCD-BeqVvMbQLat_DRkxngMAUnL5GuAqBzUajKVOuDM7yk?e=0o2XFr" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
@@ -301,7 +301,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <div class="sec" id="product">
   <div class="sec-eye">What I Would Build at Microsoft</div>
   <h2>If you can measure trust, you can own it. Here's how I would build it:</h2>
-  <p class="t">Microsoft’s footprint across Copilot, Teams, and Azure Health Data Services should support safe clinical augmentation at scale and allow performance to be measured in real workflows, not isolated chats.</p>
+  <p class="t">Improved trust improves stickiness and retention, but also patient outcomes. Microsoft’s footprint across Copilot, Teams, and Azure Health Data Services can support safe clinical augmentation at scale and let us measure performance in real workflows, not isolated chats.</p>
 
 
   <div class="rows">  
@@ -309,21 +309,21 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
       <div class="row-n grey">01</div>
       <div>
         <div class="row-title">Ship a Consumer Health Trust Benchmark</div>
-        <p class="row-body">The industry needs to focus on trust. <strong>Build an internal trust benchmark for consumer health AI:</strong> 500+ realistic prompts, clinically rated on clarity, calibration, escalation, and limitation transparency tied to release gates. I did this at NimbleRx on 10K+ messages and 20+ eval cycles; at Microsoft’s scale it defines trust for millions.</p>
+        <p class="row-body">Problem: there's a gap in quantifying trust. <strong>Ship an internal benchmark:</strong> 500+ realistic health prompts, score answers on clarity, calibration, escalation, limitation transparency. Tie to release gates. I ran this at NimbleRx on 10K+ messages, 20+ eval cycles to measure trust behaviors. Outcome: at scale this becomes the bar for all consumer health.</p>
       </div>
     </div>
     <div class="row">
       <div class="row-n grey">02</div>
       <div>
         <div class="row-title">Make transparency actionable</div>
-        <p class="row-body">Disclaimers do not improve decisions. <strong>Transparency must help users make the right next move.</strong> Copilot should clearly state what it does not know, what information would change the answer, and when escalation is appropriate. At NimbleRx, unclear AI responses were the top drop-off driver in 60+ user interviews. More precise language reduced friction. Generic warnings did not.</p>
+        <p class="row-body">Problem: disclaimers don't improve decisions. <strong>Ship transparency that drives the next step:</strong> per answer, state what we don't know, what would change the answer, when to escalate. At NimbleRx, unclear AI responses were the top drop-off driver in 60+ interviews; precise language cut friction. Generic warnings did not.</p>
       </div>
     </div>
     <div class="row">
       <div class="row-n grey">03</div>
       <div>
         <div class="row-title">Design for follow-through</div>
-        <p class="row-body">Trust fails when Copilot flags risk and the user does not act. The issue is escalation friction. <strong>Embed escalation directly in the flow.</strong> When risk is identified, the next step should be immediate: message a clinician, initiate a Teams referral, or surface a care action. Then track one metric: when Copilot recommends escalation, what percentage of users complete the next step? Follow-through is the trust signal.</p>
+        <p class="row-body">Problem: we flag risk, user doesn't act. <strong>Ship escalation in the flow:</strong> when we identify risk, the next step is one tap (message clinician, Teams referral, care action). Success metric: % of users who complete the next step when we recommend escalation. That's the trust signal.</p>
       </div>
     </div>
 </div>
@@ -371,7 +371,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="about-g">
     <div>
       <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers.</p>
-      <p class="about-mission">Trust in consumer health AI is the precondition for democratizing it. Without it, the tools either get abandoned or misused. I care deeply about building that trust so good health guidance can reach everyone, not just people who already know how to navigate the system. At MAI I want to ship products that earn it: transparent about limits, serious about escalation, and measured so we can own the outcome.</p>
+      <p class="about-mission">I believe trust in consumer health AI is the precondition for democratizing it. Without it, the tools either get abandoned or misused. I care deeply about building that trust so good health guidance can reach everyone, not just people who already know how to navigate the system. At MAI I want to ship products that earn it: transparent about limits, serious about escalation, and measured so we can own the outcome.</p>
       <p class="about-note">Resume and full scoring spreadsheet on OneDrive (yes, I intentionally didn't use Google Drive). View-only, no download required.</p>
     </div>
     <div class="lnks">
