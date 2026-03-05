@@ -134,6 +134,7 @@ tbody tr.flag { background: #fcedeb; }
 .about-g { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; }
 .about-t { font-size: .8rem; line-height: 1.82; color: var(--muted); }
 .about-t strong { color: var(--ink); }
+.about-mission { font-size: .75rem; line-height: 1.78; color: var(--muted); margin-top: 1rem; max-width: 42em; }
 .about-note { font-family: 'JetBrains Mono', monospace; font-size: .44rem; letter-spacing: .06em; color: var(--muted); margin-top: .5rem; line-height: 1.7; }
 .lnks { display: flex; flex-direction: column; gap: .35rem; flex-shrink: 0; }
 .lnk { display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .75rem; border: 1px solid var(--rule); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: all .15s; white-space: nowrap; }
@@ -210,7 +211,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="sec-eye">The Argument</div>
   <h2>MedQA measures accuracy.<br>Nobody measures trust.</h2>
   <p class="t">Clinical accuracy tells you if the model is right. In consumer AI, that is not enough. What matters is whether the user understands the answer, trusts it appropriately, and takes the right next step. A model can be correct and still fail through overconfidence, unclear escalation, or poor emotional alignment.</p>
-  <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> Calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. Starke et al. 2025 identifies these across health AI contexts. No consumer team has operationalized them into an evaluation framework. I built a proof of concept showing it can be done.</p>
+  <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> Calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. Starke et al. 2025 identifies these across health AI contexts. Teams have yet to operationalize them into an evaluation framework. I built a proof of concept showing it can be done.</p>
 </div>
 
 <!-- VALIDATION 1 -->
@@ -276,8 +277,8 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
   <div class="bench">
     <div class="bench-intro">
-      <p class="t">The 30 prompts used to score each model were drawn from the scraped messages on app reviews and the HuggingFace AI Medical Chatbot dataset, so the benchmark measures how models answer the questions patients actually ask.</p>
-      <p class="t"><strong>The finding:</strong> Transparency of Limitation scores below 4.0 for every model tested. Three of four score below 3.6. Models say "I'm not a doctor." None follow it with what that means for the question just asked: what information is reliable, what requires a clinician, and what the patient should do next. The disclaimer exists. The guidance does not. Medical superintelligence requires patients and models to know exactly where that boundary is.</p>
+      <p class="t">The 30 prompts come from the scraped app reviews and the HuggingFace AI Medical Chatbot dataset, so the benchmark measures how models answer the questions patients actually ask.</p>
+      <p class="t"><strong>The finding:</strong> Transparency of Limitation scores below 4.0 for every model; three of four below 3.6. Models say "I'm not a doctor" but don't follow with what's reliable, when to escalate, or what to do next. The disclaimer exists; the guidance does not—and that boundary is what matters.</p>
       
       <a href="https://1drv.ms/x/c/a323242b192694d0/IQCD-BeqVvMbQLat_DRkxngMAUnL5GuAqBzUajKVOuDM7yk?e=0o2XFr" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
@@ -308,7 +309,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
       <div class="row-n grey">01</div>
       <div>
         <div class="row-title">Ship a Consumer Health Trust Benchmark</div>
-        <p class="row-body">The industry focuses on correctness, not trust. <strong>Build an internal trust benchmark for consumer health AI.</strong> 500+ realistic health prompts, clinically rated on clarity, uncertainty calibration, escalation quality, and limitation transparency, with results tied to release gates. At NimbleRx, I operationalized this across 10K+ real patient messages and 20+ evaluation cycles, turning trust behaviors into measurable signals. At Microsoft's scale, this redefines user experiences across millions.</p>
+        <p class="row-body">The industry needs to focus on trust. <strong>Build an internal trust benchmark for consumer health AI:</strong> 500+ realistic prompts, clinically rated on clarity, calibration, escalation, and limitation transparency—tied to release gates. I did this at NimbleRx on 10K+ messages and 20+ eval cycles; at Microsoft’s scale it defines trust for millions.</p>
       </div>
     </div>
     <div class="row">
@@ -370,6 +371,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="about-g">
     <div>
       <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers.</p>
+      <p class="about-mission">Trust in consumer health AI is the precondition for democratizing it. Without it, the tools either get abandoned or misused. I care deeply about building that trust so good health guidance can reach everyone, not just people who already know how to navigate the system. At MAI I want to ship products that earn it: transparent about limits, serious about escalation, and measured so we can own the outcome.</p>
       <p class="about-note">Resume and full scoring spreadsheet on OneDrive (yes, I intentionally didn't use Google Drive). View-only, no download required.</p>
     </div>
     <div class="lnks">
