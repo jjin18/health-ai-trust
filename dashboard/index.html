@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trust is the Frontier — Jiahui Jin</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Satoshi:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400&family=Satoshi:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
   --ink: #111;
@@ -20,6 +20,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body { font-family: 'Satoshi', sans-serif; background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+p { font-family: 'Lora', serif; }
 
 /* UTILS */
 .w { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; color: rgba(17, 17, 17, 1); }
@@ -135,7 +136,7 @@ tbody tr.flag { background: #fcedeb; }
 .about-t { font-size: .8rem; line-height: 1.82; color: var(--muted); }
 .about-t strong { color: var(--ink); }
 .about-mission { font-size: .75rem; line-height: 1.78; color: var(--muted); margin-top: 1rem; max-width: 42em; }
-.about-note { font-family: 'JetBrains Mono', monospace; font-size: .44rem; letter-spacing: .06em; color: var(--muted); margin-top: .5rem; line-height: 1.7; }
+.about-note { font-family: 'Lora', serif; font-size: .44rem; letter-spacing: .06em; color: var(--muted); margin-top: .5rem; line-height: 1.7; }
 .lnks { display: flex; flex-direction: column; gap: .35rem; flex-shrink: 0; }
 .lnk { display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .75rem; border: 1px solid var(--rule); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: all .15s; white-space: nowrap; }
 .lnk:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -182,7 +183,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="hero-eye">Microsoft Health AI · March 2026</div>
   <h1>One bet.<br><em>Trust</em> is the next<br>frontier in health AI.</h1>
   <p class="hero-sub">
-    Health AI is getting more accurate. <strong>Patients are trusting it less.</strong> I validated that gap two ways: scraped 836 patient reviews across consumer health apps and benchmarked four models on trust. Here is what I found and what I would build at Microsoft.
+    Health AI is getting more accurate. <strong>Patients are trusting it less.</strong> (Starke et al., 2025). I validated that gap two ways: scraped 836 patient reviews across consumer health apps and benchmarked four models on trust. Here is what I found and what I would build at Microsoft.
   </p>
 </div>
 
@@ -209,7 +210,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <!-- THE ARGUMENT -->
 <div class="sec">
   <div class="sec-eye">The Argument</div>
-  <h2>Benchmarks like MedQA measure accuracy.<br>Trust behaviors remain less systematically evaluated.</h2>
+  <h2>Benchmarks like MedQA measure accuracy.<br>Trust behaviors are less systematically evaluated.</h2>
   <p class="t">Clinical accuracy tells you if the model is right. In consumer AI, that is not enough. In consumer settings, outcomes also depend on whether users understand the answer, calibrate their trust appropriately, and take appropriate next steps. A model can be correct and still fail through overconfidence, unclear escalation, or poor emotional alignment.</p>
   <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> Calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. Starke et al. 2025 identifies these across health AI contexts. Teams have yet to operationalize them into an evaluation framework. I built a proof of concept showing it can be done.</p>
 </div>
