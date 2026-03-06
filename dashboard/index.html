@@ -116,6 +116,10 @@ tbody tr.flag { background: #fcedeb; }
 .btn { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.5rem; padding: .48rem .85rem; background: var(--deep); color: #f8f4ee; font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .15s; border: none; cursor: pointer; }
 .btn:hover { background: var(--red); }
 .btn svg { width: 9px; height: 9px; }
+.eval-banner { display: flex; align-items: center; justify-content: center; gap: .6rem; padding: .6rem 1rem; background: var(--deep); margin-bottom: 0; }
+.eval-banner span { font-family: 'JetBrains Mono', monospace; font-size: .5rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+.eval-banner a { font-family: 'JetBrains Mono', monospace; font-size: .5rem; letter-spacing: .08em; text-transform: uppercase; color: #f8f4ee; text-decoration: none; padding: .3rem .6rem; background: var(--red); transition: background .15s; }
+.eval-banner a:hover { background: #d43d31; }
 
 /* LIMITATIONS (inline, matches page) */
 .lims { padding: 3rem 0; border-top: 1px solid var(--rule); background: var(--paper); }
@@ -177,6 +181,11 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
     </div>
   </div>
 </nav>
+
+<div class="eval-banner">
+  <span>Try the eval tool live</span>
+  <a href="https://trusteval.up.railway.app/" target="_blank" rel="noopener">TrustEval →</a>
+</div>
 
 <div class="w">
 
