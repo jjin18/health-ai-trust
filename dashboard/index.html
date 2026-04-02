@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trust is the Frontier — Jiahui Jin</title>
+<title>Trust in physician-supervised health AI · Counsel Health · Jiahui Jin</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400&family=Satoshi:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -36,14 +36,16 @@ nav { position: sticky; top: 0; z-index: 50; background: var(--deep); border-bot
 .nav-a a:hover { color: rgba(255,255,255,.75); }
 
 /* HERO */
-.hero { padding: 4.5rem 0 3.5rem; border-bottom: 2px solid var(--ink); }
-.hero-eye { font-family: 'JetBrains Mono', monospace; font-size: .52rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+.hero { padding: 4.5rem 0 3.5rem; }
+.hero .counsel-cap-k { margin-top: 2.25rem; margin-bottom: .85rem; }
+.hero p.t { max-width: 640px; margin-top: 0; margin-bottom: 0; }
 .hero-frame { font-size: .8rem; line-height: 1.7; color: var(--muted); max-width: 640px; margin-top: .5rem; margin-bottom: 1.25rem; letter-spacing: .01em; }
 h1 { font-family: 'EB Garamond', serif; font-size: clamp(2.6rem, 7vw, 4.4rem); font-weight: 400; line-height: 1.06; letter-spacing: -.025em; }
 h1 em { font-style: italic; color: var(--red); }
 .hero-sub { margin-top: 1.5rem; font-size: .82rem; line-height: 1.9; color: var(--muted); max-width: 540px; letter-spacing: .01em; }
 .hero-sub-next { margin-top: .6rem; }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
+.counsel-cap-k { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
 .hero-foot { margin-top: 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .hero-by { font-family: 'JetBrains Mono', monospace; font-size: .5rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .tag { font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .08em; padding: .25rem .55rem; border: 1px solid var(--rule); color: var(--muted); }
@@ -67,6 +69,8 @@ h2 { font-family: 'EB Garamond', serif; font-size: clamp(1.45rem,4vw,1.9rem); fo
 p.t { font-size: .86rem; line-height: 1.85; color: var(--muted); margin-bottom: .75rem; }
 p.t:last-child { margin-bottom: 0; }
 p.t strong { color: var(--ink); font-weight: 600; }
+p.t a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--rule); }
+p.t a:hover { border-bottom-color: var(--red); }
 
 /* SOURCE PILLS */
 .srcs { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: 1rem; }
@@ -127,7 +131,7 @@ tbody tr.flag { background: #fcedeb; }
 .lims-eye { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
 .lims h2 { font-family: 'EB Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--ink); margin-bottom: .7rem; }
 .lims-intro { font-size: .86rem; line-height: 1.82; color: var(--muted); margin-bottom: 2rem; }
-.lims-intro strong { color: var(--ink); }
+.lims-intro strong { display: block; margin-top: 0.65rem; margin-bottom: 0.85rem; color: var(--ink); }
 .lims-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; }
 .lims-grid > div { padding: 0; }
 .li-t { font-family: 'EB Garamond', serif; font-size: .98rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; }
@@ -172,11 +176,11 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <nav>
   <div class="nav-w">
-    <span class="nav-id">Jiahui Jin · Microsoft Health AI</span>
+    <span class="nav-id">Jiahui Jin · Counsel Health</span>
     <div class="nav-a">
       <a href="#validation">Validation</a>
       <a href="#benchmark">Benchmark</a>
-      <a href="#product">Product</a>
+      <a href="#product">Priorities</a>
       <a href="#limits">Limitations</a>
     </div>
   </div>
@@ -191,10 +195,11 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-eye">Microsoft Health AI · March 2026</div>
   <h1>One bet.<br><em>Trust</em> is the next<br>frontier in health AI.</h1>
-  <p class="hero-sub">This project turns <em>trust</em> in consumer&nbsp;health AI from a vague UX concern into a measurable model behavior by evaluating how systems respond to real patient questions.</p>
-  <p class="hero-sub hero-sub-next">I validated this two ways: benchmarked four models on trust and scraped 836 patient reviews across consumer health apps. Here is what I found and what I would build at Microsoft.</p>
+  <p class="hero-sub">This project turns trust in consumer health AI from a vague UX concern into a measurable model behavior by evaluating how systems respond to real patient questions.</p>
+  <p class="hero-sub hero-sub-next">I validated this two ways: benchmarked four models on trust and scraped 836 patient reviews across consumer health apps. Here is what I found and what I would build at Counsel Health.</p>
+  <div class="counsel-cap-k">Fit for Counsel's model</div>
+  <p class="t">Counsel's public story is already clear: unified health records and pattern recognition across history so doctors see the full picture, then licensed physicians when someone is ready for treatment, refills, or deeper insight. In that stack, <strong>trust</strong> is what turns AI risk signals into completed next steps, not abandoned recommendations. The front door only works if the model is explicit about limits and when human care is appropriate. Trust is what makes that workflow run. <a href="https://www.counselhealth.com/blog/responsible-ai-in-healthcare" target="_blank" rel="noopener" class="cite-lnk">Responsible AI</a></p>
 </div>
 
 <!-- STATS -->
@@ -213,7 +218,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   </div>
   <div class="s">
     <span class="s-n">0</span>
-    <span class="s-l">EXISTING BENCHMARKS FOR CONSUMER HEALTH AI TRUST</span>
+    <span class="s-l">Widely adopted benchmarks for<br>physician-supervised AI trust</span>
   </div>
 </div>
 
@@ -222,12 +227,12 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="sec-eye">The Argument</div>
   <h2>Benchmarks like MedQA measure accuracy.<br>Trust behaviors are less systematically evaluated.</h2>
   <p class="t">Clinical accuracy tells you if the model is right. In consumer AI, that is not enough. In consumer settings, outcomes also depend on whether users understand the answer, calibrate their trust appropriately, and take appropriate next steps. A model can be correct and still fail through overconfidence, unclear escalation, or poor emotional alignment.</p>
-  <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> Calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. Starke et al. 2025 identifies these across health AI contexts. Teams have yet to operationalize them into an evaluation framework. I built a proof of concept showing it can be done.</p>
+  <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. Starke et al. 2025 identifies these across health AI contexts. Few teams operationalize these as release-gating criteria, but the problem is tractable. I built a proof of concept showing how to do it.</p>
 </div>
 
 <!-- VALIDATION 1 -->
 <div class="sec" id="validation">
-  <div class="sec-eye">Validation 1 of 2 — User Data</div>
+  <div class="sec-eye">Validation 1 of 2 · User Data</div>
   <h2>Scraped 836 reviews.<br>Five trust failure modes emerged.</h2>
   <p class="t">I built a scraper targeting 1–3 star reviews from major consumer health AI platforms, then ran pattern synthesis across 669 flagged patient conversation cases from the HuggingFace AI Medical Chatbot dataset. Five recurring patterns appeared across the sampled reviews.</p>
   <div class="srcs">
@@ -283,13 +288,13 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <!-- VALIDATION 2 -->
 <div class="sec" id="benchmark">
-  <div class="sec-eye">Validation 2 of 2 — Trust Benchmark (<a href="#limits" class="sec-eye-lnk">see limitations</a>)</div>
+  <div class="sec-eye">Validation 2 of 2 · Trust Benchmark (<a href="#limits" class="sec-eye-lnk">see limitations</a>)</div>
   <h2>Benchmarked 4 models against <br>the Starke et al. trust framework.<br>Transparency fails universally.</h2>
 
   <div class="bench">
     <div class="bench-intro">
       <p class="t">The 30 prompts come from the scraped app reviews and the HuggingFace AI Medical Chatbot dataset, so the benchmark measures how models answer the questions patients actually ask.</p>
-      <p class="t"><strong>The finding:</strong> Transparency of Limitation is the worst-performing dimension. All models scored below 4.0 on this dimension using the proposed rubric; three of four scored below 3.6. Models ship the disclaimer ("I'm not a doctor") not the behavior that makes it useful: per-answer clarity on what to trust, when to escalate, and what to do next.</p>
+      <p class="t"><strong>The finding:</strong> Transparency of Limitation is the worst-performing dimension. All models scored below 4.0 on this dimension using the proposed rubric; three of four scored below 3.6. They lead with generic disclaimers, not the behavior that makes limits useful: per-answer clarity on what to trust, when to add a doctor, and what to do next. For Counsel, this is the conversion-critical dimension because it controls whether someone moves from AI guidance to a finished appropriate next step, or stalls even though the product already offers fast access to physicians.</p>
       
       <a href="https://1drv.ms/x/c/a323242b192694d0/IQCD-BeqVvMbQLat_DRkxngMAUnL5GuAqBzUajKVOuDM7yk?e=0o2XFr" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
@@ -310,31 +315,31 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <!-- PRODUCT -->
 <div class="sec" id="product">
-  <div class="sec-eye">What I Would Build at Microsoft</div>
-  <h2>If you can measure trust, you can own it.<br>Here's how I would build it:</h2>
-  <p class="t">Improved trust improves stickiness and retention, but also patient outcomes. Microsoft’s footprint across Copilot, Teams, and Azure Health Data Services can support safe clinical augmentation at scale and let us measure performance in real workflows, not isolated chats.</p>
+  <div class="sec-eye">Priorities for Counsel's care model</div>
+  <h2>If you can measure trust, you can own it.<br>Here's how I'd build it:</h2>
+  <p class="t">Trust drives credibility, retention, and follow-through. It has to hold from intake through completion of the recommended next step. <a href="https://trusteval.up.railway.app/" target="_blank" rel="noopener">TrustEval</a> style multi-turn eval fits async chat better than single-turn scores.</p>
 
 
   <div class="rows">  
     <div class="row">
       <div class="row-n grey">01</div>
       <div>
-        <div class="row-title">Ship a Consumer Health Trust Benchmark</div>
-        <p class="row-body">Problem: We don't measure trust in consumer health AI in a consistent way. <strong>Build a trust benchmark:</strong> 500+ realistic health prompts, score answers with clinical raters on clarity, calibration, escalation, and how clearly they state their limits. Use those scores to shape model behavior. I ran this at NimbleRx on 10K+ medical messages, 20+ eval cycles to create a baseline for trust behaviors. Outcome: at scale this becomes the bar for all consumer health.</p>
+        <div class="row-title">Ship a trust benchmark for physician-supervised care</div>
+        <p class="row-body">Problem: no consistent trust bar for physician-supervised AI. <strong>Build a benchmark:</strong> 500+ prompts, clinical raters on clarity, calibration, escalation, limits, framing; add multi-turn and pressure-turn suites for retention and resolution paths. Gate releases on scores. I ran this at NimbleRx on 10K+ messages, 20+ eval cycles.</p>
       </div>
     </div>
     <div class="row">
       <div class="row-n grey">02</div>
       <div>
         <div class="row-title">Make transparency actionable</div>
-        <p class="row-body">Problem: disclaimers don't improve decisions. <strong>Ship transparency that drives the next step:</strong> per answer, state what we don't know, what would change the answer, when to escalate. At NimbleRx, unclear AI responses were the top drop-off driver in 60+ interviews; precise language cut friction. Generic warnings were less effective.</p>
+        <p class="row-body">Problem: disclaimers don't improve decisions. <strong>Ship transparency that drives the next step:</strong> per answer, state what we don't know, what would change the answer, and when to add a doctor (or other appropriate action). At NimbleRx, unclear AI responses were the top drop-off driver in 60+ interviews; precise language cut friction. Generic warnings were less effective.</p>
       </div>
     </div>
     <div class="row">
       <div class="row-n grey">03</div>
       <div>
-        <div class="row-title">Design for follow-through</div>
-        <p class="row-body">Problem: we flag risk, user doesn't act. <strong>Ship escalation in the flow:</strong> when we identify risk, the next step is one tap (message clinician, Teams referral, care action). Success metric: % of users who complete the next step when we recommend escalation. That's the trust signal.</p>
+        <div class="row-title">Design for resolution</div>
+        <p class="row-body">Problem: we surface risk, but users stall before acting. <strong>Ship</strong> an unmistakable next step: what to do, why it matters, urgency level, and what happens next, plus tight context carryover so users are not re-explaining at escalation. Metric: <strong>% of recommended actions completed</strong> (by recommendation type), not opens or clicks alone.</p>
       </div>
     </div>
 </div>
@@ -344,7 +349,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="lims-w">
     <div class="lims-eye">Methodology and Limitations</div>
     <h2>This is a proof of concept, not a peer-reviewed benchmark.</h2>
-    <p class="lims-intro">The goal is to show the measurement infrastructure is worth building to inform direction, the results should not be considered conclusive. <strong>These limitations are stated plainly</strong>, because a PM who understands the limits of their own data is more useful than one who overclaims.</p>
+    <p class="lims-intro">A PM who understands the limits of their own data is more useful than one who overclaims. These limitations are stated plainly: </p>
     <div class="lims-grid">
       <div>
         <div class="li-t">Single rater, no medical background</div>
@@ -368,7 +373,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
       </div>
       <div>
         <div class="li-t">Evaluator bias cannot be ruled out</div>
-        <p class="li-p">Built by someone applying for a Microsoft health AI role. Blind evaluation protocols were not used.</p>
+        <p class="li-p">Materials prepared for Counsel Health; author is PM at NimbleRx. Blind evaluation protocols were not used.</p>
       </div>
     </div>
     <div class="cite"><a href="https://www.jmir.org/2025/1/e56306/" target="_blank" rel="noopener" class="cite-lnk">Starke G, Gille F, et al. (2025). Finding Consensus on Trust in AI in Health Care: Recommendations From a Panel of International Experts. Journal of Medical Internet Research. DOI: 10.2196/56306</a></div>
@@ -382,8 +387,8 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="about-g">
     <div>
       <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers.</p>
-      <p class="about-mission">I believe trust in consumer health AI is the precondition for democratizing it. Without it, the tools either get abandoned or misused. I care deeply about building that trust so good health guidance can reach everyone, not just people who already know how to navigate the system. At MAI I want to ship products that earn it: transparent about limits, serious about escalation, and measured so we can own the outcome.</p>
-      <p class="about-note">Resume and full scoring spreadsheet on OneDrive (yes, I intentionally used Microsoft Suite). View-only, no download required.</p>
+      <p class="about-mission">Counsel centers trust in the same flow it markets: AI plus records, then human care, with continuity across conversations. My work is how that trust is built or lost around limits, escalation, and whether recommendations turn into completed care. I want to help evaluate and improve those behaviors so the front door stays clinically credible and safe end to end.</p>
+      <p class="about-note">Resume and full scoring spreadsheet linked below. View-only, no download required.</p>
     </div>
     <div class="lnks">
       <a href="https://1drv.ms/b/c/a323242b192694d0/IQBrdneVuwewTK6lse6XAbz0AdAncyDM4UsYVyyPraXho10?e=z8b3Xw" target="_blank" rel="noopener" class="lnk">
@@ -402,7 +407,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   </div>
 </div>
 <footer>
-  <span>Consumer Health AI Trust · Proof of Concept · March 2026</span>
+  <span>Counsel Health · Physician-supervised AI trust · Proof of Concept · March 2026</span>
   <span>Jiahui Jin</span>
 </footer>
 </div>
@@ -509,7 +514,7 @@ document.getElementById('tbl').innerHTML=
           span.style.marginLeft = '.35rem';
           span.style.fontSize = '.65rem';
           span.style.color = 'var(--muted)';
-          span.textContent = ' — ' + label;
+          span.textContent = ' · ' + label;
           el.appendChild(span);
         }
       } else {
@@ -527,3 +532,7 @@ document.getElementById('tbl').innerHTML=
 </script>
 </body>
 </html>
+
+
+
+
