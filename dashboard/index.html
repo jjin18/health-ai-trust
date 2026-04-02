@@ -43,8 +43,6 @@ h1 em { font-style: italic; color: var(--red); }
 .hero-sub { margin-top: 1.5rem; font-size: .82rem; line-height: 1.9; color: var(--muted); letter-spacing: .01em; }
 .hero-sub-next { margin-top: .6rem; }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
-.counsel-cap-k { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-#product .counsel-cap-k { margin-top: 0; margin-bottom: .85rem; }
 .hero-foot { margin-top: 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .hero-by { font-family: 'JetBrains Mono', monospace; font-size: .5rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .tag { font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .08em; padding: .25rem .55rem; border: 1px solid var(--rule); color: var(--muted); }
@@ -60,6 +58,7 @@ h1 em { font-style: italic; color: var(--red); }
 /* SECTION */
 .sec { padding: 3rem 0; border-bottom: 1px solid var(--rule); }
 .sec:last-child { border-bottom: none; }
+#product.sec { padding-bottom: 1.25rem; border-bottom: none; }
 .sec-eye { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; display: flex; align-items: center; gap: .6rem; }
 .sec-eye::after { content:''; flex:1; height:1px; background:var(--rule); }
 .sec-eye-lnk { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
@@ -125,17 +124,17 @@ tbody tr.flag { background: #fcedeb; }
 .eval-banner a:hover { background: #d43d31; }
 
 /* LIMITATIONS (inline, matches page) */
-.lims { padding: 3rem 0; border-top: 1px solid var(--rule); background: var(--paper); }
+.lims { padding: 1.75rem 0 2rem; border-top: 1px solid var(--rule); background: var(--paper); }
 .lims-w { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
 .lims-eye { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
 .lims h2 { font-family: 'EB Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--ink); margin-bottom: .7rem; }
-.lims-intro { font-size: .86rem; line-height: 1.82; color: var(--muted); margin-bottom: 2rem; }
+.lims-intro { font-size: .86rem; line-height: 1.82; color: var(--muted); margin-bottom: 1.25rem; }
 .lims-intro strong { color: var(--ink); }
 .lims-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; }
 .lims-grid > div { padding: 0; }
 .li-t { font-family: 'EB Garamond', serif; font-size: .98rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; }
 .li-p { font-size: .75rem; line-height: 1.78; color: var(--muted); margin: 0; }
-.lims .cite { margin-top: 2rem; padding: .85rem 1rem; border-left: 2px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: .46rem; color: var(--muted); line-height: 1.8; }
+.lims .cite { margin-top: 1.35rem; padding: .85rem 1rem; border-left: 2px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: .46rem; color: var(--muted); line-height: 1.8; }
 .cite-lnk { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
 .cite-lnk:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
@@ -144,7 +143,6 @@ tbody tr.flag { background: #fcedeb; }
 .about-g { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; }
 .about-t { font-size: .8rem; line-height: 1.82; color: var(--muted); }
 .about-t strong { color: var(--ink); }
-.about-note { font-family: 'Lora', serif; font-size: .44rem; letter-spacing: .06em; color: var(--muted); margin-top: .75rem; line-height: 1.7; }
 .lnks { display: flex; flex-direction: column; gap: .35rem; flex-shrink: 0; }
 .lnk { display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .75rem; border: 1px solid var(--rule); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: all .15s; white-space: nowrap; }
 .lnk:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -174,7 +172,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 
 <nav>
   <div class="nav-w">
-    <span class="nav-id">Jiahui Jin · Counsel Health</span>
+    <span class="nav-id">Jiahui Jin · Counsel Health · April 2026</span>
     <div class="nav-a">
       <a href="#validation">Validation</a>
       <a href="#benchmark">Benchmark</a>
@@ -387,7 +385,6 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="about-g">
     <div>
       <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers.</p>
-      <p class="about-note">Resume and full scoring spreadsheet linked below. View-only, no download required.</p>
     </div>
     <div class="lnks">
       <a href="https://1drv.ms/b/c/a323242b192694d0/IQBrdneVuwewTK6lse6XAbz0AdAncyDM4UsYVyyPraXho10?e=z8b3Xw" target="_blank" rel="noopener" class="lnk">
@@ -406,7 +403,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   </div>
 </div>
 <footer>
-  <span>Counsel Health · Physician-supervised AI trust · Proof of Concept · March 2026</span>
+  <span>Counsel Health · Physician-supervised AI trust · Proof of Concept · April 2026</span>
   <span>Jiahui Jin</span>
 </footer>
 </div>
