@@ -37,8 +37,6 @@ nav { position: sticky; top: 0; z-index: 50; background: var(--deep); border-bot
 
 /* HERO */
 .hero { padding: 4.5rem 0 3.5rem; }
-.hero .counsel-cap-k { margin-top: 2.25rem; margin-bottom: .85rem; }
-.hero p.t { max-width: 640px; margin-top: 0; margin-bottom: 0; }
 .hero-frame { font-size: .8rem; line-height: 1.7; color: var(--muted); max-width: 640px; margin-top: .5rem; margin-bottom: 1.25rem; letter-spacing: .01em; }
 h1 { font-family: 'EB Garamond', serif; font-size: clamp(2.6rem, 7vw, 4.4rem); font-weight: 400; line-height: 1.06; letter-spacing: -.025em; }
 h1 em { font-style: italic; color: var(--red); }
@@ -46,6 +44,7 @@ h1 em { font-style: italic; color: var(--red); }
 .hero-sub-next { margin-top: .6rem; }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
 .counsel-cap-k { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+#product .counsel-cap-k { margin-top: 0; margin-bottom: .85rem; }
 .hero-foot { margin-top: 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .hero-by { font-family: 'JetBrains Mono', monospace; font-size: .5rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .tag { font-family: 'JetBrains Mono', monospace; font-size: .46rem; letter-spacing: .08em; padding: .25rem .55rem; border: 1px solid var(--rule); color: var(--muted); }
@@ -131,7 +130,7 @@ tbody tr.flag { background: #fcedeb; }
 .lims-eye { font-family: 'JetBrains Mono', monospace; font-size: .48rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
 .lims h2 { font-family: 'EB Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--ink); margin-bottom: .7rem; }
 .lims-intro { font-size: .86rem; line-height: 1.82; color: var(--muted); margin-bottom: 2rem; }
-.lims-intro strong { display: block; margin-top: 0.65rem; margin-bottom: 0.85rem; color: var(--ink); }
+.lims-intro strong { color: var(--ink); }
 .lims-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; }
 .lims-grid > div { padding: 0; }
 .li-t { font-family: 'EB Garamond', serif; font-size: .98rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; }
@@ -198,8 +197,6 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <h1>One bet.<br><em>Trust</em> is the next<br>frontier in health AI.</h1>
   <p class="hero-sub">This project turns trust in consumer health AI from a vague UX concern into a measurable model behavior by evaluating how systems respond to real patient questions.</p>
   <p class="hero-sub hero-sub-next">I validated this two ways: benchmarked four models on trust and scraped 836 patient reviews across consumer health apps. Here is what I found and what I would build at Counsel Health.</p>
-  <div class="counsel-cap-k">Fit for Counsel's model</div>
-  <p class="t">Counsel's public story is already clear: unified health records and pattern recognition across history so doctors see the full picture, then licensed physicians when someone is ready for treatment, refills, or deeper insight. In that stack, <strong>trust</strong> is what turns AI risk signals into completed next steps, not abandoned recommendations. The front door only works if the model is explicit about limits and when human care is appropriate. Trust is what makes that workflow run. <a href="https://www.counselhealth.com/blog/responsible-ai-in-healthcare" target="_blank" rel="noopener" class="cite-lnk">Responsible AI</a></p>
 </div>
 
 <!-- STATS -->
@@ -227,7 +224,9 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="sec-eye">The Argument</div>
   <h2>Benchmarks like MedQA measure accuracy.<br>Trust behaviors are less systematically evaluated.</h2>
   <p class="t">Clinical accuracy tells you if the model is right. In consumer AI, that is not enough. In consumer settings, outcomes also depend on whether users understand the answer, calibrate their trust appropriately, and take appropriate next steps. A model can be correct and still fail through overconfidence, unclear escalation, or poor emotional alignment.</p>
-  <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. Starke et al. 2025 identifies these across health AI contexts. Few teams operationalize these as release-gating criteria, but the problem is tractable. I built a proof of concept showing how to do it.</p>
+  <p class="t"><strong>The behaviors that precondition trust are measurable:</strong> calibrated uncertainty, appropriate escalation, transparent limitation, and emotional attunement. <i>Starke et al. 2025 </i> identifies these across health AI contexts. these across health AI contexts.
+    Teams have yet to operationalize them into an evaluation framework. I built a proof of concept showing it can be
+    done. </p>
 </div>
 
 <!-- VALIDATION 1 -->
@@ -317,7 +316,9 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
 <div class="sec" id="product">
   <div class="sec-eye">Priorities for Counsel's care model</div>
   <h2>If you can measure trust, you can own it.<br>Here's how I'd build it:</h2>
-  <p class="t">Trust drives credibility, retention, and follow-through. It has to hold from intake through completion of the recommended next step. <a href="https://trusteval.up.railway.app/" target="_blank" rel="noopener">TrustEval</a> style multi-turn eval fits async chat better than single-turn scores.</p>
+  <div class="counsel-cap-k">Fit for Counsel</div>
+  <p class="t">Counsel Health's product works only if users trust it: AI handles intake and structures the case, but trust determines whether patients share information, believe the guidance, and follow through to a physician. In health AI, accuracy isn't enough; systems fail when limits and escalation aren't clear, so trust has to be built into model behavior, not just messaging (<a href="https://www.counselhealth.com/blog/responsible-ai-in-healthcare" target="_blank" rel="noopener" class="cite-lnk">Responsible AI</a>).</p>
+  <p class="t">At NimbleRx, I saw that the biggest issue wasn't wrong answers, but users not trusting what to do next, which is exactly what Counsel's physician-supervised model is designed to solve.</p>
 
 
   <div class="rows">  
@@ -349,7 +350,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="lims-w">
     <div class="lims-eye">Methodology and Limitations</div>
     <h2>This is a proof of concept, not a peer-reviewed benchmark.</h2>
-    <p class="lims-intro">A PM who understands the limits of their own data is more useful than one who overclaims. These limitations are stated plainly: </p>
+    <p class="lims-intro">A PM who understands the limits of their own data is more useful than one who overclaims. <strong>These limitations are stated plainly.</strong></p>
     <div class="lims-grid">
       <div>
         <div class="li-t">Single rater, no medical background</div>
@@ -387,7 +388,7 @@ footer { padding: 1.2rem 0 2rem; display: flex; justify-content: space-between; 
   <div class="about-g">
     <div>
       <p class="about-t"><strong>Jiahui Jin.</strong> AI PM at NimbleRx (YC W15): launched an AI health companion to 1M patients, drove LLM safety eval on 10K medical messages across 20+ eval cycles, reduced clinical escalations 20% via a deployed pharmacy AI agent. Cal Hacks Grand Prize. MLH Top 50 globally out of 150K+ hackers.</p>
-      <p class="about-mission">Counsel centers trust in the same flow it markets: AI plus records, then human care, with continuity across conversations. My work is how that trust is built or lost around limits, escalation, and whether recommendations turn into completed care. I want to help evaluate and improve those behaviors so the front door stays clinically credible and safe end to end.</p>
+      <p class="about-mission">At NimbleRx the hardest adoption issues were rarely "the model is wrong." They were "I don't know if I can trust this" and "I'm not sure what to do next," especially when limits and escalation were unclear. Counsel combines chat intake, unified records, pattern recognition, and physicians in one loop, so trust can be a first-class product surface and measured with the same rigor as accuracy. My work is how that trust is built or lost around limits, escalation, and whether recommendations turn into completed care. I want to help evaluate and improve those behaviors so the front door stays clinically credible and safe end to end.</p>
       <p class="about-note">Resume and full scoring spreadsheet linked below. View-only, no download required.</p>
     </div>
     <div class="lnks">
