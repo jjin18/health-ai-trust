@@ -1,0 +1,3 @@
+cad/part-*.stl
+cad/parts.json
+__pycache__/
