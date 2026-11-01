@@ -1,3 +1,6 @@
 cad/part-*.stl
 cad/parts.json
 __pycache__/
+
+node_modules/
+assets/scene.js.map

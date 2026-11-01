@@ -17,3 +17,7 @@ Design decisions:
 3. ENT-focused section explains coverage, patient continuity and result handoff. No guaranteed increases in capacity, revenue or named EMR integrations.
 4. Equipment/environment suitability and clinical availability are explained in the concept dialog.
 5. Contact remains a truthful coming-soon dialog pending a real contact address or booking link.
+
+## Real-time 3D update
+
+The opening uses actual procedural Three.js meshes, not the SVG or a pre-rendered video: metallic headphone frame, cushioned earcups, yokes and cable, a glass-fronted workstation, procedural chart texture, room environment reflections, direct lights and contact shadows. Scroll changes camera position. The chart is illustrative. No real clinician connection or live patient data is implied. SVG remains only as a WebGL fallback.
