@@ -1,9 +1,9 @@
-# Hush — remote audiology concept
+# Hush — remote audiology for ENT
 
-Minimal static landing page focused on remote expertise and local care. No clinical photography, fake testimonials or fabricated results. Abstract visuals represent connection, not medical equipment or clinical performance.
+A static concept website showing the clinic workflow: Prepare → Connect → Review. An original SVG illustration of audiometric headphones and a remote workstation communicates audiology without staged clinical photography. Illustrations are conceptual and graphs are not patient data.
 
-Run `python -m http.server 3000` in this directory. No build dependencies are required. The prior hearing-device CAD assets are retained but are not loaded by the page.
+Run `python -m http.server 3000` in this directory. No installation or build is required. Keyboard-accessible workflow tabs, dialogs, responsive layouts, reduced-motion alternatives and a truthful concept disclosure are included.
 
-Navigation, scroll-driven motion, reduced-motion alternatives, and accessible dialogs are implemented. The partnership dialog explicitly states enquiries are opening soon; a real contact address or booking URL is still needed. No data is submitted or collected.
+The partnership destination remains pending; no enquiries are submitted or collected. The contact dialog states enquiries are opening soon.
 
-GitHub Pages serves the directory contents from the `gh-pages` branch. Sources are saved on `hush-website`.
+`DESIGN.md` records design reasoning and reference categories, including which external sources could not be inspected. Earlier hearing-device assets are retained but not loaded. Sources are pushed to `hush-website`; the directory contents are deployed on `gh-pages`.
