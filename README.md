@@ -1,15 +1,9 @@
-# Hush — remote audiology for ENT
+# Hush — remote audiology
 
-A static concept website with a real-time Three.js 3D hero: modeled headphones, reflective materials, remote workstation, procedural illustrative chart, environment lighting, shadows, scroll-driven camera, and mouse/keyboard rotation. No staged clinical photography. Equipment and graphs are illustrations, not patient data or validated equipment specifications.
+A minimal, warm editorial page: audiology within reach, a patient–audiologist connection that stays linked across rooms, and a partnership invitation. The page loads no 3D renderer, staged photos, external fonts, or libraries.
 
-## Run
+Run `python -m http.server 3000` in this directory. No install or build step is required.
 
-`python -m http.server 3000` in this directory. The renderer is bundled and self-hosted; no CDN, API key, build or installation is needed to view the site.
+Scroll positions are smoothed with time-based requestAnimationFrame interpolation. The signal moves continuously; motion pauses off-screen and respects reduced-motion preferences. Contact and concept dialogs support keyboard use. The partnership destination is still pending, and no enquiries are submitted.
 
-## Rebuild 3D
-
-`npm ci` followed by `npm run build`. Versions are pinned in package-lock.json. Editable geometry and animation are in assets/scene-source.js. The Three.js MIT license is retained in assets/vendor/THREE-LICENSE.txt.
-
-The renderer pauses when off-screen, caps pixel ratio, responds to resize and reduced-motion preferences, and falls back to the equipment SVG if WebGL cannot initialize. Prepare / Connect / Review tabs and accessible dialogs explain the proposed ENT workflow.
-
-The partnership destination remains pending; enquiries are not submitted. The contact dialog states enquiries are opening soon. Sources are pushed to hush-website; the directory contents are deployed on gh-pages.
+Earlier 3D and hearing-device assets remain as source history, but are not loaded by this page. Sources are saved on hush-website; the directory contents deploy from gh-pages.
